@@ -1,5 +1,3 @@
-Projekt realizuje zadanie Z2 (kodowanie Huffmana) na podstawie [TIiK_lab_L2_instrukcja.pdf](../docs/TIiK_lab_L2_instrukcja.pdf). Zawiera program `huff` do kompresji (`c`), dekompresji (`d`) oraz wydruku tablicy kodów (`t`), wykorzystujący moduł bitowy `../lab1/bitio.{c,h}` oraz model źródła i obliczenia entropii z `../lab1/entropy.c`.
-
 ## Kompilacja i testowanie
 
 Linux (Ubuntu/WSL), z katalogu `lab2`:
