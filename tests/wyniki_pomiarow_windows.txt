@@ -1,0 +1,37 @@
+﻿Wyniki testow Z1 - Windows
+Data: 2026-11-24 08:57:12
+TEST ZAKONCZONY SUKCESEM!
+Odczytane wartosci: 0x5, 0x1F, 0x1
+=== Pusty plik ===
+Rozmiar pliku: 0 bajtow
+Liczba roznych wartosci bajtow: 0
+Entropia: 0.000000 bit/symbol
+Teoretyczny minimalny rozmiar: 0.000000 bajtow
+=== 1000 identycznych bajtow ===
+Rozmiar pliku: 1000 bajtow
+Liczba roznych wartosci bajtow: 1
+Entropia: 0.000000 bit/symbol
+Teoretyczny minimalny rozmiar: 0.000000 bajtow
+=== Tekst polski ===
+Rozmiar pliku: 72 bajtow
+Liczba roznych wartosci bajtow: 40
+Entropia: 4.965355 bit/symbol
+Teoretyczny minimalny rozmiar: 44.688193 bajtow
+=== Losowy plik 1 MB ===
+Rozmiar pliku: 1048576 bajtow
+Liczba roznych wartosci bajtow: 256
+Entropia: 7.999830 bit/symbol
+Teoretyczny minimalny rozmiar: 1048553.663959 bajtow
+=== Archiwum ZIP ===
+Rozmiar pliku: 1049014 bajtow
+Liczba roznych wartosci bajtow: 256
+Entropia: 7.999828 bit/symbol
+Teoretyczny minimalny rozmiar: 1048991.457720 bajtow
+=== TEST PLIKU EXE ===
+Rozmiar pliku: 134700 bajtow
+Liczba roznych wartosci bajtow: 256
+Entropia: 5.125685 bit/symbol
+Teoretyczny minimalny rozmiar: 86303.728079 bajtow
+Test braku pliku: OK, kod 1
+Blad: nie mozna otworzyc pliku.
+

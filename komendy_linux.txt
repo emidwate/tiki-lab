@@ -1,0 +1,20 @@
+1. Kompilacja projektu:
+make
+
+2. Uruchomienie skryptu testowego:
+sh tests/run.sh
+
+3. Utworzenie losowego pliku 1 MB:
+head -c 1M /dev/urandom > tests/losowy.bin
+
+4. Utworzenie archiwum ZIP z pliku losowego:
+zip -9 tests/losowy.zip tests/losowy.bin
+
+5. Kontrola wyciekow pamieci programu entropy:
+valgrind --leak-check=full ./entropy tests/polski.txt
+
+6. Kontrola wyciekow pamieci modulu bitowego:
+valgrind --leak-check=full ./test_bitio
+
+7. Porownanie dwoch plikow:
+cmp tests/losowy.bin tests/losowy.zip

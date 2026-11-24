@@ -1,0 +1,21 @@
+1. Kompilacja programu entropy:
+& "D:\Dev-Cpp\MinGW64\bin\gcc.exe" -std=c11 -Wall -Wextra -O2 entropy.c -o entropy.exe -lm
+
+2. Kompilacja testu modulu bitowego:
+& "D:\Dev-Cpp\MinGW64\bin\gcc.exe" -std=c11 -Wall -Wextra -O2 -I. bitio.c tests\test_bitio.c -o test_bitio.exe
+
+3. Utworzenie losowego pliku 1 MB:
+$b = New-Object byte[] 1MB; (New-Object Random).NextBytes($b); [IO.File]::WriteAllBytes("$PWD\tests\losowy.bin", $b)
+
+4. Utworzenie archiwum ZIP z pliku losowego:
+Compress-Archive -Path .\tests\losowy.bin -DestinationPath .\tests\losowy.zip -CompressionLevel Optimal -Force
+
+5. Uruchomienie skryptu testowego:
+powershell -ExecutionPolicy Bypass -File tests\run.ps1
+
+6. Kontrola wyciekow pamieci (Dr. Memory):
+drmemory -- .\entropy.exe .\tests\polski.txt
+drmemory -- .\test_bitio.exe
+
+7. Porownanie dwoch plikow:
+fc /b .\tests\losowy.bin .\tests\losowy.zip
