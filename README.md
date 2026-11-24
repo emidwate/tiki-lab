@@ -1,0 +1,1 @@
+Repozytorium zawiera rozwiązania zadań laboratoryjnych z przedmiotu Teoria informacji i kodowania. Szczegółowe opisy i instrukcje uruchomienia znajdują się w katalogach [`lab1/`](lab1/README.md) (entropia i operacje bitowe) oraz [`lab2/`](lab2/README.md) (kodowanie Huffmana).
