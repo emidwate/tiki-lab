@@ -1,0 +1,21 @@
+1. Kompilacja projektu:
+make
+
+2. Punkt kontrolny L2 (tablica kodow, L i entropia H dla abracadabra.txt):
+./huff t tests/abracadabra.txt
+
+3. Kompresja pliku:
+./huff c tests/abracadabra.txt tests/abracadabra.huf
+
+4. Dekompresja pliku:
+./huff d tests/abracadabra.huf tests/abracadabra.dec
+
+5. Porownanie oryginalu i pliku po dekompresji:
+cmp tests/abracadabra.txt tests/abracadabra.dec
+
+6. Uruchomienie pelnego skryptu testowego:
+sh tests/run.sh
+
+7. Kontrola wyciekow pamieci:
+valgrind --leak-check=full ./huff c tests/abracadabra.txt /tmp/abra.huf
+valgrind --leak-check=full ./huff d /tmp/abra.huf /tmp/abra.dec

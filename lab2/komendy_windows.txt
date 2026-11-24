@@ -1,0 +1,21 @@
+1. Kompilacja programu huff:
+& "D:\Dev-Cpp\MinGW64\bin\gcc.exe" -std=c11 -Wall -Wextra -O2 -I. -I..\lab1 main.c huff.c ..\lab1\bitio.c -o huff.exe -lm
+
+2. Punkt kontrolny L2 (tablica kodow, L i entropia H dla abracadabra.txt):
+.\huff.exe t .\tests\abracadabra.txt
+
+3. Kompresja pliku:
+.\huff.exe c .\tests\abracadabra.txt .\tests\abracadabra.huf
+
+4. Dekompresja pliku:
+.\huff.exe d .\tests\abracadabra.huf .\tests\abracadabra.dec
+
+5. Porownanie oryginalu i pliku po dekompresji:
+fc /b .\tests\abracadabra.txt .\tests\abracadabra.dec
+
+6. Uruchomienie skryptu testowego:
+powershell -ExecutionPolicy Bypass -File tests\run.ps1
+
+7. Kontrola wyciekow pamieci (Dr. Memory):
+drmemory -- .\huff.exe c .\tests\abracadabra.txt .\tests\abracadabra.huf
+drmemory -- .\huff.exe d .\tests\abracadabra.huf .\tests\abracadabra.dec
